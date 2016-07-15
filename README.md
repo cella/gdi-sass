@@ -1,6 +1,6 @@
 # GDI - Intro to Sass
 
-Slides and materials are hosted at [http://gdiseattle.github.io/gdi-sass/](http://gdiseattle.github.io/gdi-sass/).
+Slides and materials are hosted at [http://cella.github.io/gdi-sass/](http://cella.github.io/gdi-sass/).
 
 ## Course description
 
@@ -8,21 +8,16 @@ Looking to take your CSS to the next level? Wondering how to improve your workfl
 
 The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
-**Cost:** 
-$40.00 for both classes
+**Cost:**
+$50.00 for both classes
 
-**Dates:** 
-This two class course runs on two Tuesdays:
+**Dates:**
+This class is a two-night series running on Tues, July 19th and Thurs July 21st from 6pm to 8:15pm.
 
-Class 1 - Intro to Sass: Tuesday, August 18, 6:00 - 8:00 pm 
-Class 2 - Applying Sass to Your Workflow: Tuesday, August 25, 6:00 - 8:00 pm
+**Location:**
 
-**Location:** 
-
-TUNE Kitchen<br>
-2125 Western Avenue, Seattle, WA
-
-A limited number of scholarships are available for those with a financial hardship. To apply, contact us at seattle@girldevelopit.com.
+PromptWorks<br>
+1211 Chestnut Street Suite 400, Philadelphia, PA
 
 ## Prerequisites:
 
@@ -41,7 +36,7 @@ At this time, you will need to provide your own laptop - PC or Mac - to particip
 We look at how Sass makes writing CSS easier, and set up our environment. You will install Ruby and Sass, learn basics of the command line and get your files set up to compile Sass into CSS.
 
 #### Part 2: Building Blocks of Sass.
-You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS. 
+You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS.
 You'll learn the difference between hidden comments and visible comments, and see the output of your Sass experiments.
 
 ### Class 2
