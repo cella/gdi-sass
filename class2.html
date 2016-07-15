@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Class 2 - Intro to Sass, Girl Develop It</title>
+    <title>Class 2 - Intro to Sass - Girl Develop It</title>
 
     <meta name="description" content="This is the official Girl Develop It Intro to Sass course.
 
@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-    <!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-    
+    <!-- light editor --><link rel="stylesheet" href="lib/css/light.css">
+    <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+
     <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -34,8 +34,11 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
     </script>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
@@ -47,7 +50,6 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <!-- Opening slide -->
         <section>
           <img src="img/gdi_logo_badge.png" alt="Girl Develop It" style="max-height:300px;">
           <h1>Intro to Sass</h2>
@@ -57,7 +59,7 @@
         <!-- Opening slide -->
         <section>
           <h2>Download Class 2 Files:</h2>
-          <p><a href="http://gdiseattle.github.io/gdi-sass/class2-exercises.zip">http://gdiseattle.github.io/gdi-sass/class2-exercises.zip</a></p>
+          <p><a href="http://cella.github.io/gdi-sass/class2-exercises.zip">http://cella.github.io/gdi-sass/class2-exercises.zip</a></p>
         </section>
 
         <section>
@@ -66,29 +68,10 @@
             <p>First, navigate via the command line to your /class2-exercises/practice/stylesheets directory.</p>
             <p>Then type:</p>
 
-            <pre><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+            <pre><code contenteditable class ="bash">$ sass --watch scss:css</code></pre>
           </div>
         </section>
 
-        <section>
-          <h3>Review: Extends</h3>
-          <div class="left-align">
-          <p>Create an extend in _utilities:</p>
-          <ul>
-            <li>clearfix</li>
-          </ul>
-          <pre><code class ="php">%yourExtendName {
-  property: value;
-}
-
-// example usage
-p {
-  @extend %yourExtendName;
-}
-</code></pre>
-          </div>
-        </section>
-        
         <!-- Review/Exercise 1 -->
         <section>
           <h3>Review: Mixins</h3>
@@ -123,7 +106,7 @@ p {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -136,7 +119,7 @@ p {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -144,15 +127,15 @@ p {
         <section>
           <h3>Interpolation</h3>
           <div class="left-align">
-            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities: 
+            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities:
             <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
-  -webkit-transform: rotate(-5deg); 
+  -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   transform: rotate(-5deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -161,16 +144,16 @@ p {
           <h3>Interpolation</h3>
           <div class="left-align">
             We do this by using <a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_">interpolations</a>, which is a special syntax for variables that appear inside regular CSS text:
-            <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
-  -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
-  transform: rotate(<span class="variable">#{$degree}</span>deg);
+            <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
+  -webkit-transform: rotate(#{$degree}deg);
+  -moz-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>        
+        </section>
 
 
         <!-- @extend -->
@@ -186,9 +169,9 @@ p {
   @extend .headline;
   text-decoration: underline;
   text-transform: uppercase;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>          
+        </section>
 
         <!-- Exercise 2: Advanced Mixins -->
         <section>
@@ -212,16 +195,16 @@ p {
           <h3>CSS3: Browser Prefixes</h3>
           <div class="left-align">
             Lots of CSS3 features require browser prefixes or have complex syntaxes. These are perfectly suited to mixins, so we can include them in our styles without having to copy and paste from sites like <a target="_blank" href="http://css3please.com/">CSS3 Please</a>.
-            <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
-  -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
-  transform: rotate(<span class="variable">#{$degree}</span>deg);
+            <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
+  -webkit-transform: rotate(#{$degree}deg);
+  -moz-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>     
+        </section>
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -233,9 +216,9 @@ p {
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
 }
-@include gradient(#fff, #000);</code></pre>  
+@include gradient(#fff, #000);</code></pre>
 </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -249,7 +232,7 @@ p {
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/kcfwH">opacity</a></li>
             </ul>
         </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: UI development mixins -->
         <section>
@@ -274,7 +257,7 @@ height: 18px; }</code></pre>
 
           </tr></td></table>
         </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: UI development mixins -->
         <section>
@@ -291,9 +274,9 @@ height: 18px; }</code></pre>
   background-image: url("../../img/icons/#{$file}");
   @include sprite-position($x, $y);
 }</code></pre>
-            
+
         </div>
-        </section>  
+        </section>
 
        <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -307,7 +290,7 @@ height: 18px; }</code></pre>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/qkDAe">CSS shapes (triangles, arrows)</a></li>
             </ul>
         </div>
-        </section>  
+        </section>
 
 
         <!-- Exercise 3: CSS3 and UI mixins -->
@@ -373,9 +356,9 @@ height: 18px; }</code></pre>
 }
 @include opacity(transparent);
 </code></pre>
-            
+
         </div>
-        </section>  
+        </section>
 
         <!-- Exercise 5: Logic -->
         <section>
@@ -420,8 +403,8 @@ height: 18px; }</code></pre>
   width: 6em;
 }</code></pre>
 
-          </tr></td></table>            
-         
+          </tr></td></table>
+
           </div>
         </section>
 
@@ -467,8 +450,8 @@ height: 18px; }</code></pre>
   background: url('facebook.png');
 }</code></pre>
 
-          </tr></td></table>            
-         
+          </tr></td></table>
+
           </div>
         </section>
 
@@ -523,22 +506,25 @@ height: 18px; }</code></pre>
           <div style="font-size:1200%; height:100%; margin-top:30%" class ="blue">?
             <div class ="clear"></div></div>
         </section>
+
       </div>
       <footer>
         <div class="copyright">
-          Intro to Sass ~ GDI Seattle
+          Intro to Sass - GDI Philadelphia
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
     </div>
 
+
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
 
     <script>
+
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
+            Reveal.initialize({
         controls: true,
         progress: true,
         history: true,
@@ -554,9 +540,11 @@ height: 18px; }</code></pre>
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
+
     </script>
+
   </body>
 </html>

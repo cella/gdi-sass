@@ -1,29 +1,27 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Class 1 - Intro to Sass, Girl Develop It</title>
+    <title>Class 1 - Intro to Sass - Girl Develop It</title>
 
-		<meta name="description" content="This is the official Girl Develop It Intro to Sass course. 
+    <meta name="description" content="This is the official Girl Develop It Intro to Sass course.
 
     The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <link rel="icon" type="image/png" href="reveal.js/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-    <!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-    
+    <!-- light editor --><link rel="stylesheet" href="lib/css/light.css">
+    <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+
     <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -37,31 +35,33 @@
       }
     </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!-- If use the PDF print sheet so students can print slides-->
 
-	<body>
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-		<div class="reveal">
+  <body>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-			  <!-- Opening slide -->
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
         <section>
-          <img src="img/gdi_logo_badge.png"alt="Girl Develop It" style="max-height:300px;">
-          <h1>Intro to Sass</h2>
+          <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
+          <h1>Intro to Sass</h1>
           <h2>Class 1</h2>
         </section>
 
-        <!-- Opening slide -->
         <section>
           <h2>Download Class 1 Files:</h2>
-          <p><a href="http://gdiseattle.github.io/gdi-sass/class1-exercises.zip">http://gdiseattle.github.io/gdi-sass/class1-exercises.zip</a></p>
+          <p><a href="http://cella.github.io/gdi-sass/class1-exercises.zip">http://cella.github.io/gdi-sass/class1-exercises.zip</a></p>
         </section>
 
-        <!-- Welcome-->
         <section>
           <h3>Welcome!</h3>
           <div>
@@ -75,7 +75,7 @@
           </ul>
           </div>
         </section>
-        
+
         <section>
           <h3>Welcome!</h3>
           <div>
@@ -88,7 +88,6 @@
           </div>
         </section>
 
-        <!--What does Sass do? -->
         <section>
           <h3>What does Sass do?</h3>
           <div>
@@ -99,15 +98,14 @@ header {
   background-color: $brandColor;
   color: $accentColor;
 }
-header a { color: $accentColor; }</code></pre>  
+header a { color: $accentColor; }</code></pre>
 </div>
         </section>
 
-        <!--What does Sass do 2? -->
         <section>
           <h3>What does Sass do?</h3>
           <div>
-            Nesting:          
+            Nesting:
             <pre><code contenteditable class="sass css">header {
   background-color: $brandColor;
   color: $accentColor;
@@ -118,25 +116,23 @@ header a { color: $accentColor; }</code></pre>
 </div>
         </section>
 
-        <!--What does Sass do 3? -->
         <section>
           <h3>What does Sass do?</h3>
           <div>
-            Extends:          
-            <pre><code contenteditable class="sass css">%visually-hidden {
+            Mix-ins:
+            <pre><code contenteditable class="sass css">@mixin visually-hidden {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 .image-replace {
-  @extend %visually-hidden;
+  @include visually-hidden;
   background: url(logo.png) no-repeat;
 }
 </code></pre>
 </div>
         </section>
 
-        <!-- Tools -->
         <section>
           <h3>Tools</h3>
           <ul>
@@ -145,7 +141,7 @@ header a { color: $accentColor; }</code></pre>
              </li>
              <li>
               <span class="green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</li>
-              <li><span class="green">Command Line</span> 
+              <li><span class="green">Command Line</span>
                 <ul>
                   <li>Terminal for Mac (Find in Applications> Utilities)</li>
                   <li>Git for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
@@ -158,9 +154,8 @@ header a { color: $accentColor; }</code></pre>
                 <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
              </li>
           </ul>
-        </section>        
-        
-        <!-- Terms-->
+        </section>
+
         <section>
          <h3>Terms</h3>
          <ul>
@@ -179,8 +174,7 @@ header a { color: $accentColor; }</code></pre>
            </li>
          </ul>
         </section>
-        
-        <!-- Process: Sass to CSS -->
+
         <section>
           <h3>Sass and CSS</h3>
           <p>How Sass compiles into CSS</p>
@@ -189,24 +183,22 @@ header a { color: $accentColor; }</code></pre>
           2 .You run a command (sass --watch) on the command line <br>
           3. .scss or .sass files compile into .css files</div>
         </section>
-        
-        <!-- Practice: Command Line -->
+
         <section>
           <h3>Command Line Tips</h3>
           <div class="left-align">
             Up one level:
-            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd ../</code></pre>
+            <pre><code contenteditable class="bash">$ cd ../</code></pre>
             Go to your home directory:
-            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd /</code></pre>
+            <pre><code contenteditable class="bash">$ cd /</code></pre>
             Go to a specific folder:
-            <pre><code contenteditable class="command-line"><span class="variable">$</span> <span class="identifier">cd Users/marcy/Sites/gdi-sass</span></pre></code>
+            <pre><code contenteditable class="bash">$ cd Users/cella/Sites/gdi-sass</pre></code>
             List files in a directory:
-            <pre><code contenteditable class="command-line">$ ls</pre></code>
+            <pre><code contenteditable class="bash">$ ls</pre></code>
             </div>
             <span class="blue left-align"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet</a></span>
         </section>
-        
-        <!-- Install Sass -->
+
         <section>
           <h3>Installing Sass</h3>
           <div class="left-align">First, we need to install Ruby:
@@ -214,21 +206,20 @@ header a { color: $accentColor; }</code></pre>
             <li>Download for Windows: <a target="_blank" href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
             <li>Mac users: you're in luck! Mac OS X comes pre-installed with Ruby. Try the following command in Terminal to make sure: </li>
           </ul>
-          <pre><code contenteditable class ="command-line">ruby -v</code></pre>
+          <pre><code contenteditable class="bash">ruby -v</code></pre>
           </div>
         </section>
-        
-        <!-- Variables-->
+
         <section>
           <h3>Installing Sass</h3>
           <div class=" left-align">
             <p>Now that Ruby is installed, we can install the Sass gem.</p>
             <p>In Terminal or Git Bash:</p>
-            <pre><code contenteditable class ="command-line">gem install sass</code></pre>
+            <pre><code contenteditable class="bash">gem install sass</code></pre>
           </div>
             <p class="fragment"><img src="img/confetti.gif" style="border: 0; width: 600px; height: 300px; box-shadow: none;"></p>
         </section>
-        
+
         <section>
           <h3>Setting up our stylesheets</h3>
           <div>
@@ -270,8 +261,7 @@ header a { color: $accentColor; }</code></pre>
             </ul>
           </div>
         </section>
-        
-        <!-- Sass Watch - Compiling -->
+
         <section>
           <h3>Compile with the Sass Watch Command</h3>
           <div class="left-align">
@@ -285,7 +275,6 @@ header a { color: $accentColor; }</code></pre>
           </div>
         </section>
 
-        <!-- Sass Watch - Compiling -->
         <section>
           <h3>Compile with the Sass Watch Command</h3>
           <div class="left-align">
@@ -296,18 +285,16 @@ header a { color: $accentColor; }</code></pre>
             <p class="fragment">The <strong>css</strong> part is the folder where our .css files will be. These files are the compiled output of our Sass, and are only created when we run the above command.</p>
 
           </div>
-        </section>        
-        
-        
-        <!-- Nesting -->
+        </section>
+
         <section class="present">
           <h3>Nesting</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css">header { 
+            <pre><code contenteditable class ="sass css">header {
   color: black;
-  nav { 
-    background: red; 
+  nav {
+    background: red;
     a { color: white; }
 }
 </code></pre>
@@ -317,18 +304,14 @@ header nav { background: red; }
 header nav a { color: white; }</code></pre>
           </div>
         </section>
-        
- 
-        
-       
-        <!-- Comparison-->
+
         <section>
           <h3>Referencing Parent Selectors: &</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css">nav { 
-    background: red; 
-    a { 
+            <pre><code contenteditable class ="sass css">nav {
+    background: red;
+    a {
       color: white;
       &:hover { text-decoration: underline; }
     }
@@ -340,8 +323,7 @@ nav a { color: white; }
 nav a:hover { text-decoration: underline; }</code></pre>
           </div>
         </section>
-        
-        <!-- Exercise - #2? 3? -->
+
         <section>
           <h3>Let's Develop It!</h3>
           <ul>
@@ -354,8 +336,7 @@ nav a:hover { text-decoration: underline; }</code></pre>
 
           </ul>
         </section>
-        
-        <!-- BREAK before Part 2 -->
+
         <section>
           <h3>Break Time!</h3>
           <div>
@@ -364,7 +345,6 @@ nav a:hover { text-decoration: underline; }</code></pre>
           </div>
         </section>
 
-<!-- Scripting! -->
         <section>
           <h3>Variables</h3>
           <p>Sometimes you want to reuse a value for a style - you use them frequently, they're hard to type or remember, such as</p>
@@ -380,7 +360,7 @@ nav a:hover { text-decoration: underline; }</code></pre>
             </li>
           </ul>
         </section>
-        
+
          <section>
           <h3>Defining Variables</h3>
           <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
@@ -392,8 +372,6 @@ $accentColor: #ccc;</code></pre>
         <p class="fragment">Note that in Sass files, you can comment out a line with <span class="green">// two slashes</span></p>
 
         </section>
-
-
 
        <section>
         <h3>Variables</h3>
@@ -412,11 +390,12 @@ footer {
   color: $accentColor;
   background-color: $brandColor;
 }</code></pre>
-        </section>        
+        </section>
+
         <section>
           <h3>Keep em together</h3>
           <p>Variables are easy to change if you keep them all in one stylesheet, and update or add to the styles as needed</p>
-<pre><code contenteditable class="php">// Let's define some variables 
+<pre><code contenteditable class="php">// Let's define some variables
 // Colors
 $favoriteColor: #2a79af;
 $anotherColor: #f05b62;
@@ -430,11 +409,9 @@ $giantLogo: 36px;
 // Margins and Padding
 $defaultMargin: 15px;
 $defaultPadding: $defaultMargin;
-</code></pre>          
+</code></pre>
         </section>
-          
-        
-        <!-- Exercise -->
+
         <section>
           <h3>Let's Develop It</h3>
           <ul>
@@ -442,14 +419,13 @@ $defaultPadding: $defaultMargin;
             <li>Don't forget to put it in the right folder</li>
             <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
 <pre><code contenteditable class="sass css">@import "_utilities";
-</code></pre>                     
+</code></pre>
             </li>
             <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
             <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
           </ul>
         </section>
-        
-        <!-- Syntax highlighting -->
+
         <section>
           <h3>Syntax highlighting</h3>
           <div>
@@ -459,11 +435,10 @@ $defaultPadding: $defaultMargin;
             <li>Go to Tools > Command Palette. Type "Package Control".</li>
             <li>Click "Install Package"</li>
             <li>Type "Sass" and click the first result</li>
-            <li>Click: View > Syntax > Sass</li> 
+            <li>Click: View > Syntax > Sass</li>
           </div>
         </section>
 
-<!-- Math -->
         <section class="present">
           <h3>Math Operations</h3>
           <div>
@@ -483,9 +458,9 @@ $defaultPadding: $defaultMargin;
           <h3>Math Operations</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+            <pre><code contenteditable class ="sass css">$layoutWidth: 960px;
 #sidebar {
-  width: <span class="variable">$layoutWidth</span>/3;
+  width: $layoutWidth/3;
 }
 </code></pre>
             <p>CSS output:</p>
@@ -495,16 +470,15 @@ $defaultPadding: $defaultMargin;
           </div>
         </section>
 
-
        <section class="present">
           <h3>Math Operations</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+            <pre><code contenteditable class ="sass css">$layoutWidth: 960px;
 $defaultPadding: 16px;
 #main {
   padding: $defaultPadding;
-  width: <span class="variable">$layoutWidth</span> - $defaultPadding*2;
+  width: $layoutWidth - $defaultPadding*2;
 }
 </code></pre>
             <p>CSS output:</p>
@@ -515,8 +489,6 @@ $defaultPadding: 16px;
           </div>
         </section>
 
-
-        <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
@@ -530,7 +502,6 @@ footer {
   width: ($layoutWidth - 20px);
 }</code></pre>
         </section>
-        
 
         <section class="present">
           <h3>Color Functions</h3>
@@ -538,11 +509,11 @@ footer {
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$linkColor</span>: #000;
-<span class="variable">$linkShadow</span>: lighten(#000, 40%);
+            <pre><code contenteditable class ="sass css">$linkColor: #000;
+$linkShadow: lighten(#000, 40%);
 a {
-  color: <span class="variable">$linkColor</span>;
-  text-shadow: <span class="variable">$linkShadow</span>;
+  color: $linkColor;
+  text-shadow: $linkShadow;
 }
 </code></pre>
 </td>
@@ -562,11 +533,11 @@ a {
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
-<span class="variable">$text</span>: darken($background,50%);
+            <pre><code contenteditable class ="sass css">$background: #ff0000; // red
+$text: darken($background,50%);
 body {
-  color: <span class="variable">$text</span>;
-  background: <span class="variable">$background</span>;
+  color: $text;
+  background: $background;
 }
 </code></pre>
 </td>
@@ -588,11 +559,11 @@ body {
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
-<span class="variable">$text</span>: darken($background,50%);
+            <pre><code contenteditable class ="sass css">$background: #ff0000; // red
+$text: darken($background,50%);
 body {
-  background: <span class="variable">grayscale(#f00)</span>;
-  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+  background: grayscale(#f00);
+  color: grayscale(darken(#f00, 50%));
 }
 </code></pre>
 </td>
@@ -607,7 +578,6 @@ body {
           </tr></td></table>
         </section>
 
-        <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
@@ -622,41 +592,41 @@ grayscale(#2a79af)
 saturate(#2a79af, 40%)
 invert(#2a79af)</code></pre>
         </section>
-        
+
          <section class="present">
           <h3>Comments</h3>
           <p class="left-align">Traditional CSS comments are downloaded by the user. With Sass, we can specify whether comments are left in the final CSS code or are only visible to the developer:</p>
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="comment">/* Multiline comments will appear
- in the final CSS file */</span>
-<span class="value">//This single-line comment won't</span>
+            <pre><code contenteditable class ="sass css">/* Multiline comments will appear
+ in the final CSS file */
+//This single-line comment won't
 a { color: blue; }
 </code></pre>
 </td>
 <td>
             <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css"><span class="comment">/* Multiline comments will appear
- in the final CSS file */</span>
+            <pre><code contenteditable class ="sass css">/* Multiline comments will appear
+ in the final CSS file */
   a { color: blue; }</code></pre>
 
           </tr></td></table>
         </section>
 
-        
+
          <section class="present">
           <h3>Mixins</h3>
            <p class="left-align">Mixins are really just a collection of one or more styles that are reusable, like variables are reusable values</p>
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="value">@mixin dropshadow(<span class="variable">$text</span>)</span> {
-  color: <span class="variable">$text</span>;
-  text-shadow: 2px 4px lighten(<span class="variable">$text</span>, 50%);
+            <pre><code contenteditable class ="sass css">@mixin dropshadow($text) {
+  color: $text;
+  text-shadow: 2px 4px lighten($text, 50%);
 }
 p {
-  <span class="value">@include dropshadow(black);</span>
+  @include dropshadow(black);
 }
 </code></pre>
 </td>
@@ -676,7 +646,7 @@ p {
           <h3>Mixins</h3>
           <p class="left-align">These are especially useful for CSS3 rules that need browser prefixes, like gradients.</p>
           <p><a target="_blank" href="http://cfarm.co/gradient">cfarm.co/gradient</a></p>
-         
+
         </section>
 
         <!-- Exercise-->
@@ -686,7 +656,7 @@ p {
           <li>Add some mixins to your _utilities.scss file - a good candidate is any style that needs a browser prefix</li>
           <li>Try replacing the footer gradient with a mixin</li>
           <li>Use these mixins in your styles.scss file</li>
-          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li> 
+          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li>
         </ul>
           <pre><code class ="sass css">@mixin name {
   property: value;
@@ -697,33 +667,31 @@ p {
 }
 </code></pre>
         </section>
-        
 
-
-
-        <!-- -->
         <section>
           <h2>Questions?</h2>
           <div style="font-size:1200%; height:100%; margin-top:30%" class ="blue">?
             <div class ="clear"></div></div>
         </section>
-			</div>
-  		<footer>
+
+      </div>
+      <footer>
         <div class="copyright">
-          Intro to Sass ~ GDI Seattle
+          Intro to Sass - GDI Philadelphia
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
-		</div>
+    </div>
 
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.min.js"></script>
 
-		<script>
+    <script>
+
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
+            Reveal.initialize({
         controls: true,
         progress: true,
         history: true,
@@ -739,10 +707,11 @@ p {
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
-			});
-		</script>
-	</body>
+      });
+
+    </script>
+
+  </body>
 </html>
-  
