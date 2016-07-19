@@ -89,6 +89,24 @@
         </section>
 
         <section>
+          <h3>What is Sass?</h3>
+          <ul>
+            <li>Stands for Syntactically Awesome Stylesheets</li>
+            <li>Looks just like CSS but is superpowered</li>
+            <li>Any valid CSS is valid SCSS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Why use it?</h3>
+          <ul>
+            <li>Scaling CSS is difficult</li>
+            <li>Slight variations of colors, fonts, numbers, and other properties arise</li>
+            <li>Stylesheet size may become unmanageable</li>
+          </ul>
+        </section>
+
+        <section>
           <h3>What does Sass do?</h3>
           <div>
             Variables:
@@ -144,35 +162,39 @@ header a { color: $accentColor; }</code></pre>
               <li><span class="green">Command Line</span>
                 <ul>
                   <li>Terminal for Mac (Find in Applications> Utilities)</li>
-                  <li>Git for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
+                  <li>Git Bash for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
                   </li>
                 </ul>
              </li>
              <li>
               <div class="green">Text Editor:</div>
-              <div><a target="_blank" href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
-                <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
+              <div><a target="_blank" href="http://www.sublimetext.com">Sublime Text - Mac or Windows</a></div>
              </li>
           </ul>
         </section>
 
         <section>
          <h3>Terms</h3>
+         <p>Sass is a <span class="green">preprocesser</span> written in <span class="green">Ruby</span> that <span class="green">compiles</span> <span class="green">SCSS</span> into <span class="green">CSS3</span></p>
+         <br>
          <ul>
-           <li>
-            <div><span class="green">Ruby:</span> A programming language</div><br>
-           </li>
-           <li>
-            <div><span class="green">Preprocessor:</span> A computer program that modifies data to conform with the input requirements of another program.
-            <span class ="blue">(Sass is a preprocessor)</span></div><br>
-           </li>
             <li>
-            <div><span class="green">Compile:</span> The act of converting one computer program into another programming language.</div><br>
-           </li>
-           <li>
-            <div><span class="green">CSS3:</span> The output of Sass. Sass compiles into CSS!</div>
-           </li>
-         </ul>
+              <div><span class="green">Preprocessor:</span> A computer program that takes one type of data and converts it to another type of data.
+              </div><br>
+            </li>
+            <li>
+              <div><span class="green">Ruby:</span> A programming language</div><br>
+            </li>
+            <li>
+              <div><span class="green">Compile:</span> The act of converting one programming language into another.</div><br>
+            </li>
+            <li>
+              <div><span class="green">SCSS:</span> Sassy CSS</div><br>
+            </li>
+            <li>
+              <div><span class="green">CSS3:</span> The latest standard of CSS</div>
+            </li>
+          </ul>
         </section>
 
         <section>
@@ -190,7 +212,7 @@ header a { color: $accentColor; }</code></pre>
             Up one level:
             <pre><code contenteditable class="bash">$ cd ../</code></pre>
             Go to your home directory:
-            <pre><code contenteditable class="bash">$ cd /</code></pre>
+            <pre><code contenteditable class="bash">$ cd ~</code></pre>
             Go to a specific folder:
             <pre><code contenteditable class="bash">$ cd Users/cella/Sites/gdi-sass</pre></code>
             List files in a directory:
@@ -366,7 +388,7 @@ nav a:hover { text-decoration: underline; }</code></pre>
           <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
           <pre><code contenteditable class="sass css">//define using dollar sign
 $brandColor: #f90000;
-$mainTextcolor: #fff;
+$mainTextColor: #fff;
 $accentColor: #ccc;</code></pre>
         <p>To create a variable you need a dollar sign before the name of your variable, and a colon: to give it a <em>value</em></p>
         <p class="fragment">Note that in Sass files, you can comment out a line with <span class="green">// two slashes</span></p>
@@ -416,9 +438,9 @@ $defaultPadding: $defaultMargin;
           <h3>Let's Develop It</h3>
           <ul>
             <li>Create a new Sass stylesheet called _utilities.scss</li>
-            <li>Don't forget to put it in the right folder</li>
+            <li>Don't forget to put it in the /scss/ folder</li>
             <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
-<pre><code contenteditable class="sass css">@import "_utilities";
+<pre><code contenteditable class="sass css">@import "utilities";
 </code></pre>
             </li>
             <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
@@ -431,7 +453,7 @@ $defaultPadding: $defaultMargin;
           <div>
           <p>You can download tools to highlight your Sass properly in Sublime Text:</p>
           <ul>
-            <li><a target="_blank" href="http://wbond.net/sublime_packages/package_control/installation">Install Package Manager for Sublime Text 2</a></li>
+            <li><a target="_blank" href="http://wbond.net/sublime_packages/package_control/installation">Install Package Manager for Sublime Text</a></li>
             <li>Go to Tools > Command Palette. Type "Package Control".</li>
             <li>Click "Install Package"</li>
             <li>Type "Sass" and click the first result</li>
