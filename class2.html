@@ -161,7 +161,17 @@ p {
           <h3>@extend classes</h3>
           <div class="left-align">
             Sometimes we have styles that duplicate another class, then add to it. We can use the extend prefix (%) for these, or extend a class:
-            <pre><code contenteditable class="sass css">.headline {
+            <pre><code contenteditable class="sass css">%headline {
+  font-size: 2em;
+  font-weight: bold;
+}
+.lead-story-headline {
+  @extend %headline;
+  text-decoration: underline;
+  text-transform: uppercase;
+}</code></pre>
+
+<pre><code contenteditable class="sass css">.headline {
   font-size: 2em;
   font-weight: bold;
 }
@@ -440,7 +450,7 @@ height: 18px; }</code></pre>
 </td>
 <td>
             <p>CSS output:</p>
-            <pre style="width: 380px"><code contenteditable class ="sass css">.icon-youtube {
+            <pre style="width: 380px"><code contenteditable class="sass css">.icon-youtube {
   background: url('youtube.png');
 }
 .icon-twitter {
@@ -481,12 +491,105 @@ height: 18px; }</code></pre>
             <p>The following tools can help you write Sass even faster:</p>
           <ul>
             <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a>: Compile Sass &amp; more without command line</li>
-            <li><a target="_blank" href="http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/">Sass Sleuth</a>: See Sass line numbers in your browser</li>
+            <li><a target="_blank" href="http://mobify.github.io/sass-sleuth/">Sass Sleuth</a>: See Sass line numbers in your browser</li>
             <li><a target="_blank" href="http://livereload.com/">Live Reload</a>: Compile Sass without refreshing your browser</li>
-            <li><a target="_blank" href="http://compass-style.org">Compass</a></li>
+            <li><a target="_blank" href="http://compass-style.org">Compass</a>: CSS Authoring Framework that uses Sass</li>
           </ul>
           </div>
         </section>
+
+        <section>
+          <h3>Bonus: Compass</h3>
+          <div class="left-align">Installing Compass:
+          <pre><code contenteditable class="bash">
+            $ gem update --system
+            $ gem install compass
+
+          </code></pre>
+          </div>
+          <div class="left-align">Setting up a Compass project
+            <pre><code contenteditable class="bash">
+              $ compass create compass-test
+              $ cd compass-test
+              $ compass watch
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Compass Mixins</h3>
+          <div class="left-align">
+            <p>Compass has a *lot* of <a href="http://compass-style.org/index/mixins/">mixins</a> already pre-built for you so you don't have to code them yourself!
+            </p>
+            <pre><code contenteditable class="php">nav {
+  @include float-right;
+  a {
+    text-decoration: none;
+    color: $my_color;
+    @include inline-block;
+    @include text-shadow(0 1px 1px rgba(#000,0.3));
+    @include single-transition(color, 0.5s, ease-in);
+
+    &:hover {
+      color: shade($my_color, 20%);
+    }
+  }
+}
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <div class="left-align">
+            <p>Create an index.html file in your compass-test folder and copy/paste the markup below:</p>
+            <pre><code contenteditable class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;My Compass Project&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheets/screen.css&quot;&gt;
+  &lt;/head&gt;
+   &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;My Compass Project&lt;/h1&gt;
+      &lt;nav&gt;
+        &lt;a href=&quot;#&quot;&gt;Shirts&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Pants&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Accessories&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <div class="left-align">
+            <p>In sass/screen.scss, use some of the mixins that Compass provides.  Look in their <a href="http://compass-style.org/index/mixins/">documentation</a> for more details.</p>
+            <pre><code contenteditable class="php">@import "compass/reset";
+@import "compass";
+
+$my_color: #BADA55;
+nav {
+  @include float-right;
+  a {
+    text-decoration: none;
+    color: $my_color;
+    @include inline-block;
+    @include text-shadow(0 1px 1px rgba(#000,0.3));
+    @include single-transition(color, 0.5s, ease-in);
+    &:hover {
+      color: shade($my_color, 20%);
+    }
+  }
+}
+            </code></pre>
+          </div>
+        </section>
+
 
        <!-- More to Explore -->
         <section>
@@ -497,6 +600,13 @@ height: 18px; }</code></pre>
             <li><a target="_blank" href="http://guides.railsgirls.com/">Rails</a>: Rails is a software development framework written in Ruby. Sass &amp; Haml are used in Rails apps. Try the Rails Girls tutorials to build your own app!</li>
             <li><a target="_blank" href="http://lesscss.org/">LESS</a>: a CSS preprocessor like Sass with different syntax</li>
           </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Class Survey</h2>
+          <div class="left-align">
+           <p><a href="http://goo.gl/forms/VLbNwEHUPWSgvWNe2">http://goo.gl/forms/VLbNwEHUPWSgvWNe2</a></p>
           </div>
         </section>
 
